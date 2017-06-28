@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1>Ever wanted a random number between 0 and 20?</h1>
+		<p>Now it's possible with just a click of a button!</p>
+		<button onclick="getNumber()">Try it!</button>
+		<p id="number"></p>
+		<script>
+			function getNumber() {
+				randomWholeNum();
+				//random number transformed to whole number
+				//flooring function retrieved from: https://www.freecodecamp.com/challenges/generate-random-whole-numbers-with-javascript
+				randomNumber = Math.floor(Math.random() * 21);
+				document.getElementById("number").innerHTML = randomNumber;
+			}
+			//return random number
+			function randomWholeNum() {
+				return Math.random();
+			}
+		</script>
+	</body>
+</html>
+
