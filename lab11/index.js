@@ -9,7 +9,7 @@ app.use('/lab8', express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/lab8', function(req, res) {
+app.get('/', function(req, res) {
   response.render('pages/index');
 });
 
