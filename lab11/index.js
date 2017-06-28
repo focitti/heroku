@@ -10,7 +10,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/lab8', function(req, res) {
-  res.sendFile(__dirname + '/public/index.html');
+  response.render('pages/index');
 });
 
 app.listen(app.get('port'), function() {
