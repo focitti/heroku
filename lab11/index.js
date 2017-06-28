@@ -9,8 +9,8 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/lab8', function(request, response) {
-  response.render('/lab8');
+app.get('/lab8', function(req, res) {
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 app.listen(app.get('port'), function() {
