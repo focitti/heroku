@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "does-nothing",
+  "version": "1.0.0",
+  "description": "generates random number",
   "engines": {
     "node": "6.10.2"
   },
@@ -22,5 +22,5 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "G"
 }
