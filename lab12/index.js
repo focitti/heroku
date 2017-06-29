@@ -1,42 +1,27 @@
-var express = require('express');
 var http = require('http');
+var path = require('path');
+var url = require('url');
+var express = require('express');
 var app = express();
+var request = require('request');
 
-options = {
-	host: 'http://developer.mbta.com/lib/rthr/red.json',
-	port: 443,
-	path: '/redline.json',
-	method: 'GET',
-	headers: {
-		'Content-Type': 'application/json'
-	}
-};
-
-callback = function(response) {
-	var str = '';
-	response.on('data',function (body) {
-		str += body;
+request({
+    url: 'http://developer.mbta.com/lib/rthr/red.json',
+    headers: {
+        'Connection': 'keep-alive',
+	'Content-Type': 'application/json'
+    }
+}, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+        console.log(body);
+	app.get('/redline.json', function(request, response) {
+		result = JSON.parse(body);
+		response.json(result);
 	});
-	response.on('end',function () {
-		console.log(req.data);
-		console.log(str);
-		response.send(str)
-	});
-}
-
-var req = http.request(options, callback).end();
-
-app.set('port', (process.env.PORT || 8080));
-
-app.use('/redline.json', express.static(__dirname + '/public'));
-
-// views is directory for all template files
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-app.get('/redline.json', function(req, res) {
-  res.render('pages/index');
+    }
 });
+
+app.set('port', (process.env.PORT || 5000));
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
