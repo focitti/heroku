@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.6",
-  "description": "A sample Node.js app using Express 4",
+  "name": "red-line-schedule",
+  "version": "1.0.0",
+  "description": "prodives json data for mbta api",
   "engines": {
     "node": "6.10.2"
   },
@@ -12,25 +12,19 @@
   "dependencies": {
     "ejs": "2.5.6",
     "express": "4.15.2",
-    "get-json": "0.0.3",
-    "http": "4.0.3",
-    "json-server": "^0.10.3",
-    "request": "^2.81.0"
+    "http" : "4.0.3",
+    "path" : "4.0.3",
+    "url" : "4.0.3",
+    "express" : "4.0.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heroku/node-js-getting-started.git"
+    "url": "https://github.com/heroku/red-line-schedule"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/heroku/node-js-getting-started/issues"
-  },
-  "homepage": "https://github.com/heroku/node-js-getting-started#readme",
-  "devDependencies": {},
-  "author": ""
+  "license": "GPL"
 }
