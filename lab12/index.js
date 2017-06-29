@@ -20,6 +20,9 @@ request({
 	});
     }
 });
+
+app.use(express.static(__dirname));
+
 // views is directory for all template files
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
