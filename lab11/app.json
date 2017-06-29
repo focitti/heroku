@@ -1,6 +1,0 @@
-{
-  "name": "does-nothing",
-  "description": "generates random number",
-  "repository": "https://github.com/heroku/does-nothi",
-  "keywords": ["node", "express", "heroku"],
-}
